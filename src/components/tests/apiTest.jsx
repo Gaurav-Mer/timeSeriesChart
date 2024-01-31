@@ -2,6 +2,7 @@ import { useState } from "react";
 import useUploadData from "../hooks/apiRequest/useUploadData";
 
 const ApiTest = () => {
+    //calling the useUploadData hook for uploading data 
     const { loading, error, uploadData } = useUploadData();
     const [dummyData, setDummyData] = useState([{ title: "ABC", id: 232 }, { title: "PENCIL", id: "SDf" }])
     const handleUpload = async () => {

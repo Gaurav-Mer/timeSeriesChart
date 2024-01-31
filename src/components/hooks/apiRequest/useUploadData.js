@@ -1,11 +1,11 @@
-// req  -> method h post
-//need data form the user i.e body (req)
+//@required need data form the user i.e data (req)
 //need url from the user where to hit (req)
+//return the promise better handle at where we are calling it 
 
 import { useState } from "react";
 
 //callback  after data uploaded successfully  (if any );
-const useUploadData = (url, method) => {
+const useUploadData = () => {
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(false);
 
