@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import UseRefExample from './components/tests/useRefExample';
 import Chat from './components/tests/chat/chat';
 import Hoc from './components/hocs/hoc';
+import Main from './components/hocs/example2/main';
 
 const App = () => {
   const data = [
@@ -52,7 +53,7 @@ const App = () => {
         <Route path="/testing" element={<Testing />} />
         <Route path="/ref" element={<UseRefExample />} />
         <Route path="/chat" element={<Chat />} />
-        <Route path="/hoc" element={<Hoc />} />
+        <Route path="/hoc" element={<Main />} />
       </Routes>
     </BrowserRouter>
   );
