@@ -12,6 +12,7 @@ const useUploadData = (url, method) => {
     const uploadData = async (url, data, callBackFnc) => {
         setLoading(true);
         setError(false);
+        //i have call this on apitest file:--------
         try {
             const res = await fetch(url, {
                 method: "POST",
