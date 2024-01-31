@@ -9,7 +9,8 @@ const useFetchData = (url, method) => {
     const fetchData = async () => {
         method = method ? method : {};
         const res = await fetch(url, method);
-        if (!res || res?.status !== 200) {
+        console.log("res is ", res);
+        if (res?.status !== 200) {
             setLoading(false)
             return setError(true)
         }

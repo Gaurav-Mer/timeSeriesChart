@@ -8,7 +8,7 @@ const Testing = () => {
     // console.log("daattt->", { error, value });
 
     //fetching the data  :-
-    const [error, data, loading] = useFetchData("https://dummyjson.com/products1");
+    const [data, error, loading] = useFetchData("https://dummyjson.com/products");
     console.log("fething data is->", { error, data, loading });
     return (
         // <div style={{ display: "flex ", justifyContent: 'center', alignItems: 'center', marginTop: 50 }}>
@@ -33,4 +33,4 @@ const Testing = () => {
     )
 }
 
-export default Testing;
+export default Testing; 

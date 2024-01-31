@@ -2,6 +2,10 @@
 import React from 'react';
 import TimeSeries from './components/charts/timeSeries';
 import Testing from './components/testing';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import UseRefExample from './components/tests/useRefExample';
+import Chat from './components/tests/chat/chat';
+import Hoc from './components/hocs/hoc';
 
 const App = () => {
   const data = [
@@ -39,9 +43,18 @@ const App = () => {
     //   <h1>Time Series Scatter Plot</h1>
     //   <TimeSeries data={adata} />
     // </div>
-    <div>
-      <Testing />
-    </div>
+    // <div>
+    //   <Testing />
+    // </div>
+    <BrowserRouter>
+      <Routes >
+        <Route path="/" element={<TimeSeries data={adata} />} />
+        <Route path="/testing" element={<Testing />} />
+        <Route path="/ref" element={<UseRefExample />} />
+        <Route path="/chat" element={<Chat />} />
+        <Route path="/hoc" element={<Hoc />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
