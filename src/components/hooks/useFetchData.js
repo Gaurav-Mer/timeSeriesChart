@@ -5,11 +5,9 @@ const useFetchData = (url, method) => {
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState([]);
 
-
     const fetchData = async () => {
         method = method ? method : {};
         const res = await fetch(url, method);
-        console.log("res is ", res);
         if (res?.status !== 200) {
             setLoading(false)
             return setError(true)
@@ -29,8 +27,9 @@ const useFetchData = (url, method) => {
             setError(true);
             setLoading(false);
         }
-    }, [url])
-    return [data, error, loading]
+    }, [url]);
+
+    return [data, error, loading];
 }
 
 export default useFetchData;
