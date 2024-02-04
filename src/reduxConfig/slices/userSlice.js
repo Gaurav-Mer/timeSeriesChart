@@ -1,19 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { useEffect } from "react";
 
 const initialState = {
-    name: "garry here",
-}
+    userData: {}
+};
 
-useEffect(() => {
-    console.log("GAURAV MER IS HERE ");
-}, [])
 const userSlice = createSlice({
-    name: "userData", initialState: initialState, reducers: {
+    name: "userData",
+    initialState: initialState,
+    reducers: {
         updateUsername: (state, action) => {
-            state.name = action.username;
+            state.userData = action.userData;
         }
     }
 });
+
 export const { updateUsername } = userSlice.actions;
 export default userSlice.reducer;
