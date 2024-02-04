@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom';
 
 const Dashboard = () => {
     return (
-        <Navigate to={"/"} />
+        <h3>I AM DASHBAORd</h3>
     )
 }
 

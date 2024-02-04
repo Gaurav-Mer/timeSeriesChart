@@ -19,7 +19,8 @@ const useUploadData = () => {
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify(data)
+                body: JSON.stringify(data),
+                credentials: "include", // Include credentials for cross-origin requests
             });
             if (!res || res.status !== 200) {
                 setError(true);

@@ -8,7 +8,13 @@ const useFetchData = (url, method, onlyResp = false) => {
     const fetchData = async () => {
         try {
             method = method ? method : {};
-            const res = await fetch(url, method);
+            const res = await fetch(url, method, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                credentials: "include", // Include credentials for cross-origin requests
+            });
             if (res?.status !== 200) {
                 setLoading(false)
                 return setError(true)
