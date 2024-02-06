@@ -28,7 +28,8 @@ const validateAuthAndFetchData = (initalData = {}) => {
                             const rData = await profileData.json();
 
                             if (profileData?.status === 200) {
-                                setLoading(false)
+                                setLoading(false);
+                                //here user is loggedin and setting its detail in store:-
                                 return dispatch(updateUsername({ userData: rData?.rData }));
                             }
                         }
@@ -37,6 +38,7 @@ const validateAuthAndFetchData = (initalData = {}) => {
                 setLoading(false);
                 dispatch(updateUsername({ userData: jsonData?.rData }));
             } else {
+                //here it means that user is not login 
                 setLoading(false);
             }
         } catch (error) {
