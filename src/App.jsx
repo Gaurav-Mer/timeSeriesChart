@@ -22,6 +22,7 @@ import Bookingstytem from './routes/bookingstytem';
 import { PrimeReactProvider } from "primereact/api";
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 import Product from './routes/product';
+import ProductThunkEx from './routes/productThunkEx';
 
 
 const App = () => {
@@ -66,6 +67,7 @@ const App = () => {
           </ValidateRoute>} />
           <Route path='/bookingSystem' element={<Bookingstytem />} /> 
           <Route path='/product' element={<Product />} /> 
+          <Route path='/productList' element={<ProductThunkEx />} /> 
           <Route path='*' element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
