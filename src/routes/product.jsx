@@ -61,4 +61,4 @@ const Product = () => {
     )
 }
 
-export default React.memo(Product)
+export default React.memo(Product);
