@@ -23,6 +23,7 @@ import { PrimeReactProvider } from "primereact/api";
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 import Product from './routes/product';
 import ProductThunkEx from './routes/productThunkEx';
+import Form from './components/useReducer/form';
 
 
 const App = () => {
@@ -68,6 +69,7 @@ const App = () => {
           <Route path='/bookingSystem' element={<Bookingstytem />} /> 
           <Route path='/product' element={<Product />} /> 
           <Route path='/productList' element={<ProductThunkEx />} /> 
+          <Route path='/useReducer' element={<Form />} /> 
           <Route path='*' element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>

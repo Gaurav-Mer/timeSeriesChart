@@ -29,7 +29,7 @@ const productSlice = createSlice({
 
 export const fetchListProd = createAsyncThunk("products/productList", async () => {
     const resp = await fetch("https://jsonplaceholder.typicode.com/posts").then(data => data.json())
-    return resp
+    return resp;
 });
 
 export const productData = state => state.productSlice;
