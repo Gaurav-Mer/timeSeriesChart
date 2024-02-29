@@ -24,6 +24,13 @@ import "primereact/resources/themes/lara-light-cyan/theme.css";
 import Product from './routes/product';
 import ProductThunkEx from './routes/productThunkEx';
 import Form from './components/useReducer/form';
+import TodoList from './components/customHooks/example1/todoList';
+import HandleUserForm from './components/section2/example1/useReducer/handleUserForm';
+import UserList from './components/routesExample/example1/userList';
+import SingleUser from './components/routesExample/example1/singleUser';
+import CreateUser from './components/routesExample/example1/createUser';
+import GithubList from './components/suspenseExample/example1/githubList';
+import Navbar from './components/navbar/navbar';
 
 
 const App = () => {
@@ -44,6 +51,7 @@ const App = () => {
   return (
     <PrimeReactProvider>
       <BrowserRouter>
+        <Navbar />
         <Routes >
           <Route path="/" element={
             <ValidateRoute userData={userData} pageType='home'>
@@ -66,10 +74,16 @@ const App = () => {
           <Route path="/register" element={<ValidateRoute userData={userData} pageType='register'>
             <Register />
           </ValidateRoute>} />
-          <Route path='/bookingSystem' element={<Bookingstytem />} /> 
-          <Route path='/product' element={<Product />} /> 
-          <Route path='/productList' element={<ProductThunkEx />} /> 
-          <Route path='/useReducer' element={<Form />} /> 
+          <Route path='/bookingSystem' element={<Bookingstytem />} />
+          <Route path='/product' element={<Product />} />
+          <Route path='/productList' element={<ProductThunkEx />} />
+          <Route path='/useReducer' element={<Form />} />
+          <Route path='/customHooks/1' element={<TodoList />} />
+          <Route path='/section2/useReducer' element={<HandleUserForm />} />
+          <Route path='/userList/create' element={<CreateUser />} />
+          <Route path='/userList' element={<UserList />} />
+          <Route path='/userList/:id' element={<SingleUser />} />
+          <Route path='/suspense' element={<GithubList />} />
           <Route path='*' element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
