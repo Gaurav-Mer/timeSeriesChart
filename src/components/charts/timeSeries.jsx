@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import ComponentWithNavbar from '../hocs/componentWithNavbar/componentWithNavbar';
+import Inital from '../../partials/timeSeries/inital';
 
 const TimeSeries = () => {
-    return (
-        <div>
-            I am time series
-        </div>
-    )
+    const WrappingComp = ComponentWithNavbar(Inital);
+
+    return (<WrappingComp />)
 }
 
 export default TimeSeries;

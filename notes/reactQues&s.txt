@@ -1,0 +1,43 @@
+What is react js ? 
+    React js is a open source front-end js library which is used to create UI. React is well known programming language these days due to its performance .
+    --features of react js ------
+    1.  It is faster due to a concept know as virtual dom 
+    2.  It has a featture called component that helps to reuse the code 
+    3.  Unidirectional flow of data 
+
+Dis-Advantagous of React js ? 
+    It is a library not a framework 
+    It becomes complex for the new commers to understad code if used terinary operator
+
+
+what is virtual Dom ? 
+    It is a in-memory representation of browser dom. It used to store it in memory to get sync with real dom. As we know that direct minuplutation is very costly because it used to re-render the whole page.So to improve it virtual dom comes in action and makes the react faster.
+
+What is reconcillation ? 
+    It is the process of updating the browser dom that makes react to work faster. So what happen is it  used a copy of real dom at first time the page loads       
+
+
+what is React Fiber ?
+    It is a new reconcillation engine or the reimplemention of prev algo 
+    It is used to increase the performance in the areas like gesture, layouts ,animations
+    It is based on incremental rendering which means that breaking down the works into smaller chunks 
+    which are known as Fiber.This is async in nature so that it can pause ,resume reuse prev work during rendering
+    It provided the better error-boundries
+
+
+what is Custom hooks ? 
+    These are the js function to reuse the logic that is going to be repeat in out application.
+    here we use the built in hooks to create custom hooks ex fetching data its logic remain same over the time so we can make them as a hook
+
+
+what is HOC ?
+    Hoc are the component that takes a component as a input and return a enhance component. Develper used to create hOC to get rid of DRY. It is used to reuse the ui desing that is common among application
+
+what is controlled component ?
+    Are the components where the state or data is manage by the component internally.Here component cann change and get  data using  the attributes. 
+
+what is uncontrolled component? 
+       
+
+
+
